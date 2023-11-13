@@ -15,21 +15,25 @@ def index(reques):
     return HttpResponse(documento)
 
 def carreras(request):
-    carreras = list(Carreras.objects.values())
+    carreras = list(Carreras.objects.all())
     doc_externo = loader.get_template('Carreras.html')
     documento = doc_externo.render({"objetos":carreras})
     return HttpResponse(documento)
 
 def profesores(request):
-    profesores = list(Profesores.objects.values())
+    profesores = list(Profesores.objects.all())
     doc_externo = loader.get_template('Profesores.html')
     documento = doc_externo.render({'objetos':profesores})
     return HttpResponse(documento)
 
 def estudiantes(reques):
-    estudiantes = list(Estudiantes.objects.values())
-    return JsonResponse(estudiantes,safe=False)
+    estudiantes = list(Estudiantes.objects.all())
+    doc_externo = loader.get_template('Estudiantes.html')
+    documento = doc_externo.render({'objetos':estudiantes})
+    return HttpResponse(documento)
 
 def asignaturas(request):
-    asignaturas = list(Asignaturas.objects.values())
-    return JsonResponse(asignaturas,safe=False)
+    asignaturas = list(Asignaturas.objects.all())
+    doc_externo = loader.get_template('Asignaturas.html')
+    documento = doc_externo.render({'objetos':asignaturas})
+    return HttpResponse(documento)

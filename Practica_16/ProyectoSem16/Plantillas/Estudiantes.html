@@ -9,14 +9,16 @@
                 <td>Id</td>
                 <td>Nombre</td>
                 <td>Apellido</td>
-                <td>Correo</td>
+                <td>Edad</td>
+                <td>Carrera</td>
             </tr>
             {%for objeto in objetos %}
                 <tr>
                     <td>{{objeto.id}}</td>
-                    <td>{{objeto.Nombre_asignatura}}</td>
-                    <td>{{objeto.Profesor_asignatura.Nombre_profesores}}</td>
-                    <td>{{objeto.Carrera_asignatura.Nombre_Carrera}}</td>
+                    <td>{{objeto.Nombre_estudiante}}</td>
+                    <td>{{objeto.Apellido_estudiante}}</td>
+                    <td>{{objeto.Edad_estudiante}}</td>
+                    <td>{{objeto.Carrera_estudiante.Nombre_Carrera}}</td>
                 </tr>
             {%endfor%}
         </table>
