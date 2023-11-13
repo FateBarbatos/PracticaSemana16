@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Profesores</title>
+        <meta name="fate">
+    </head>
+    <body >
+        <table border="1mm">
+            <tr>
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Correo</td>
+            </tr>
+            {%for objeto in objetos %}
+                <tr>
+                    <td>{{objeto.id}}</td>
+                    <td>{{objeto.Nombre_profesores}}</td>
+                    <td>{{objeto.Apellido_profesores}}</td>
+                    <td>{{objeto.Correo_profesores}}</td>
+                </tr>
+            {%endfor%}
+        </table>
+    </body>
+</html>

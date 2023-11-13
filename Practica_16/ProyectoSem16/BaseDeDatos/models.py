@@ -5,7 +5,7 @@ from django.db import models
 
 #Tabla de carreras
 class Carreras(models.Model):
-    Nombre_Carrera = models.CharField(200)
+    Nombre_Carrera = models.TextField()
 
 #Tabla de profesores
 class Profesores(models.Model):
@@ -17,7 +17,7 @@ class Profesores(models.Model):
 class Estudiantes(models.Model):
     Nombre_estudiante = models.TextField()
     Apellido_estudiante = models.TextField()
-    Edad_estudiante = models.IntegerField()
+    Edad_estudiante = models.TextField()
     Carrera_estudiante = models.ForeignKey(Carreras,on_delete=models.CASCADE)
 
 #Tabla de asignatura
